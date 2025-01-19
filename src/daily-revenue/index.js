@@ -1,13 +1,7 @@
-export const stateRevenue = {
-  SP: 67836.43,
-  RJ: 36678.66,
-  MG: 29229.88,
-  ES: 27165.48,
-  Others: 19849.53,
-};
+import data from "../dados.json" assert { type: "json" };
 
-export function analyzeRevenue(revenue) {
-  const validRevenue = revenue.filter((value) => value > 0);
+export function analyzeRevenue() {
+  const validRevenue = data.filter((value) => value.valor > 0).map((value) => value.valor);
 
   return {
     lowestRevenue: Math.min(...validRevenue),

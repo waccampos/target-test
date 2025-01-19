@@ -1,7 +1,7 @@
 import { sum } from "./sum/index.js";
 import { isFibonacci } from "./fib/index.js";
-import { stateRevenue, analyzeRevenue } from "./daily-revenue/index.js";
-import { calculateStatePercentage } from "./revenue/percentage.js";
+import { analyzeRevenue } from "./daily-revenue/index.js";
+import { calculateStatePercentage, stateRevenue } from "./revenue/percentage.js";
 import { reverseString } from "./reverse-characters/index.js";
 
 // Question 1 - Sum calculation
@@ -16,8 +16,8 @@ console.log(
 );
 
 // Question 3 - Revenue analysis
-const dailyRevenue = [67736.43, 70700.0, 55000.0, 0, 36678.66, 34000.0];
-const revenueAnalysis = analyzeRevenue(dailyRevenue);
+
+const revenueAnalysis = analyzeRevenue();
 console.log("3. Revenue Analysis:");
 console.log(`   Lowest value: $ ${revenueAnalysis.lowestRevenue.toFixed(2)}`);
 console.log(`   Highest value: $ ${revenueAnalysis.highestRevenue.toFixed(2)}`);
